@@ -1,0 +1,11 @@
+global:
+  scrape_interval:     60s
+  evaluation_interval: 60s
+
+rule_files:
+  - alerts.yml
+
+scrape_configs:
+  - job_name: 'kamon'
+    static_configs:
+      - targets: ['localhost:9095', 'localhost:9096']
