@@ -1,7 +1,6 @@
-package com.lightbend.akka.http.sample
+package kamon.akka.sample
 
-import java.sql.{ Connection, PreparedStatement, SQLException, Statement }
-import java.sql.DriverManager
+import java.sql.{ Connection, DriverManager, PreparedStatement }
 
 object DBService {
 

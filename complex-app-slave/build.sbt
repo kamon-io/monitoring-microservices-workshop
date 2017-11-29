@@ -22,6 +22,7 @@ lazy val root = (project in file(".")).
       "io.kamon" %% "kamon-akka-remote-2.4"   % "1.0.0-RC4",
       "io.kamon" %% "kamon-jdbc"              % "1.0.0-RC4",
       "io.kamon" %% "kamon-jaeger"            % "1.0.0-RC4",
+      "io.kamon" %% "kamon-zipkin"            % "1.0.0-RC4-95dd595d2aff90794c49acdf4bb3673817f2af48",
 
 
       "com.h2database" % "h2" % "1.3.148",

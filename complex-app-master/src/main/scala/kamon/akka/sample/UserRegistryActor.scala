@@ -1,4 +1,4 @@
-package com.lightbend.akka.http.sample
+package kamon.akka.sample
 
 import akka.actor.{ Actor, ActorLogging, Props }
 import kamon.Kamon

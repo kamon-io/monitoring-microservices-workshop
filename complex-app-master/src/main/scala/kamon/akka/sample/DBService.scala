@@ -1,4 +1,4 @@
-package com.lightbend.akka.http.sample
+package kamon.akka.sample
 
 import java.sql.{ Connection, DriverManager, PreparedStatement }
 

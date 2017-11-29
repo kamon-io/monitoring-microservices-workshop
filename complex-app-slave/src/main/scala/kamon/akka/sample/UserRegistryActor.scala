@@ -1,4 +1,4 @@
-package com.lightbend.akka.http.sample
+package kamon.akka.sample
 
 import akka.actor.{ Actor, ActorLogging, Props }
 import kamon.Kamon
@@ -42,7 +42,7 @@ class UserRegistryActor extends Actor with ActorLogging {
 
   def getUsers: Users = {
     val span = Kamon.buildSpan("getting-users-service")
-      .withTag("time", System.currentTimeMillis())
+      //      .withTag("time", System.currentTimeMillis())
       .withTag("userCount", users.size)
       .start()
     Kamon.withContext(Kamon.currentContext().withKey(Span.ContextKey, span)) {

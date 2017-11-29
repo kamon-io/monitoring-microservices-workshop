@@ -1,25 +1,20 @@
-package com.lightbend.akka.http.sample
+package kamon.akka.sample
 
 import akka.actor.{ ActorRef, ActorSystem }
 import akka.event.Logging
 import akka.http.scaladsl.Http
-
-import scala.concurrent.duration._
+import akka.http.scaladsl.model.HttpRequest
 import akka.http.scaladsl.server.Directives.{ pathPrefix, _ }
-import akka.http.scaladsl.model.{ HttpRequest, StatusCodes }
 import akka.http.scaladsl.server.Route
-import akka.http.scaladsl.server.directives.MethodDirectives.delete
 import akka.http.scaladsl.server.directives.MethodDirectives.get
-import akka.http.scaladsl.server.directives.MethodDirectives.post
 import akka.http.scaladsl.server.directives.RouteDirectives.complete
-import akka.http.scaladsl.server.directives.PathDirectives.path
-
-import scala.concurrent.{ Await, Future }
-import com.lightbend.akka.http.sample.UserRegistryActor._
 import akka.pattern.ask
 import akka.stream.{ ActorMaterializer, ActorMaterializerSettings }
 import akka.util.Timeout
+import kamon.akka.sample.UserRegistryActor.GetUsers
 
+import scala.concurrent.Future
+import scala.concurrent.duration._
 import scala.util.{ Failure, Success }
 
 //#user-routes-class
